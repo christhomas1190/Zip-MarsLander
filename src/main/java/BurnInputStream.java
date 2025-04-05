@@ -5,9 +5,11 @@ public class BurnInputStream implements BurnStream {
 
     @Override
     public int getNextBurn(DescentEvent status) {
+        //moved loop to surround input. would run forever in input wasn't 0-200
+        while (true) {
+        System.out.println("Enter. burn amount 0-200");
         String[] tokens = scanner.nextLine().split(" ");
         if (tokens.length > 0) {
-            while (true) {
                 try {
                     int burn = Integer.parseInt(tokens[0]);
                     return burn;
@@ -16,6 +18,5 @@ public class BurnInputStream implements BurnStream {
                 }
             }
         }
-        return 0;
     }
 }
