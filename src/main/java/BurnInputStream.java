@@ -9,6 +9,7 @@ public class BurnInputStream implements BurnStream {
         while (true) {
         System.out.println("Enter. burn amount 0-200");
         String[] tokens = scanner.nextLine().split(" ");
+        //I think here is where I would handle anything outside of 0-200?
         if (tokens.length > 0) {
                 try {
                     int burn = Integer.parseInt(tokens[0]);

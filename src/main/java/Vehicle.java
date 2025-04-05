@@ -96,4 +96,5 @@ public class Vehicle {
         DescentEvent descentEvent=new DescentEvent(burn, altitude,fuel,velocity,prevAltitude);
         return descentEvent;
     }
+
 }

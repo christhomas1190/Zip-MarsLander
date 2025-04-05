@@ -77,6 +77,7 @@ public class Simulation {
         // create a new BurnInputStream
         // pass the new BurnInputStream to the runSimulation method
         int randomAltitude = (int)(Math.random()*8000);
+
         Vehicle ship=new Vehicle(randomAltitude);
 
         Simulation sim= new Simulation(ship);
