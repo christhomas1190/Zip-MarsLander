@@ -78,7 +78,8 @@ public class Vehicle {
     }
 
     public boolean stillFlying() {
-        if(altitude>0){
+        //fixed fliying
+        if(altitude>0&&fuel>0&&flying==FLYING){
             return true;
         }else{
         return false;}
