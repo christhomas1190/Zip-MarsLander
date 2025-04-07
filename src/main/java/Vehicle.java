@@ -9,7 +9,7 @@ public class Vehicle {
     public Vehicle(int InitialAltitude) {
         // initialize the altitude AND previous altitude to initialAltitude
         altitude=InitialAltitude;
-         prevAltitude=InitialAltitude;
+        prevAltitude=InitialAltitude;
 
     }
 
@@ -31,7 +31,6 @@ public class Vehicle {
     public Vehicle() {
         int altitude= 8000;
         int prevAltitude= 8000;
-        int velocity= 1000;
         int fuel = 12000;
         int burn = 0;
         int flying = FLYING;}
@@ -52,7 +51,7 @@ public class Vehicle {
                 flying = SUCCESS;
             }
         } else {
-            if (this.altitude > 0) {
+            if (this.velocity > 0) {
                 s = emptyfuel;
                 flying = EMPTYFUEL;
             } }
@@ -94,7 +93,7 @@ public class Vehicle {
     public DescentEvent getStatus(int tick) {
         // create a return a new DescentEvent object
         // filled in with the state of the vehicle.
-        DescentEvent descentEvent=new DescentEvent(burn, altitude,fuel,velocity,prevAltitude);
+        DescentEvent descentEvent=new DescentEvent(tick, velocity, fuel,altitude,flying);
         return descentEvent;
     }
 

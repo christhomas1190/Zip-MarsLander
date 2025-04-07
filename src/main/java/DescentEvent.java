@@ -7,19 +7,12 @@ public class DescentEvent {
 
     public DescentEvent(int t, int sp, int f, int h, int st) {
         this.Seconds = t * 10;
+        this.Status = st;
         this.Velocity = sp;
         this.Fuel = f;
         this.Altitude = h;
     }
 
-    public int getVelocity() {
-        return this.Velocity;
-    }
-
-    public int getAltitude() {
-
-        return this.Altitude;
-    }
     public int getStatus() { return this.Status; }
     @Override
     public String toString() {
